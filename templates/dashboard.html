@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %} Dashboard {% endblock %}
+
+{% block head %}
+<style>
+    body {
+    background-image:url('{% static "backformyShop.jpeg" %}');
+    background-size: cover;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color:#eee;width:350px;height:250px;">
+            <span style="margin-left:30px;padding-bottom:50px;text-align:center;"><a href="{% url 'mainCalculation' %}">Fancy Items</a></span>
+        </div>
+         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color:#eee;width:350px;height:250px;margin-left:20px;">
+            Notebooks
+        </div>
+         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="background-color:#eee;width:350px;height:250px;margin-left:20px;">
+               Accessories
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
